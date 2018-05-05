@@ -20,12 +20,12 @@ def model_train():
                                  width_shift_range=0.1,
                                  rotation_range=10)
 
-    train_set = train_datagen.flow_from_directory('/home/deusimar/Pictures/crop/crop-train',
+    train_set = train_datagen.flow_from_directory('data_set/train',
                                                   target_size=(150, 150),
                                                   batch_size=32,
                                                   class_mode='categorical')
 
-    test_set = test_datagen.flow_from_directory('/home/deusimar/Pictures/crop/crop-test',
+    test_set = test_datagen.flow_from_directory('data_set/validation',
                                                 target_size=(150, 150),
                                                 batch_size=32,
                                                 class_mode='categorical')
