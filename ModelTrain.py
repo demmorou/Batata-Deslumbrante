@@ -66,9 +66,9 @@ def model_train():
 
     model.fit_generator(train_set,
                                steps_per_epoch=500,
-                               epochs=100,  # Increase this when not on Kaggle kernel
-                               verbose=2,  # 1 for ETA, 0 for silent
-                               validation_data=test_set,  # For speed
+                               epochs=100,
+                               verbose=2,
+                               validation_data=test_set,
                         )
 
     model.save_weights('weights002.h5')
